@@ -63,7 +63,7 @@ function Details() {
           {
             relatedMovies.map((movie, index) => (
               <img src={Image_base_url +  movie.poster_path} alt="" onClick={() => handleMovieClick(movie)}
-                className='w-[110px] md:w-[210px] rounded-md hover:border-[3px] hover:border-gray-300 cursor-pointer
+                className='w-[100px] md:w-[210px] rounded-md hover:border-[3px] hover:border-gray-300 cursor-pointer
                 hover:scale-105 transition-all duration-150 ease-in' key={index} />
             ))
           }

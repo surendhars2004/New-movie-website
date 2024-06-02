@@ -37,9 +37,6 @@ function Search() {
         console.log(resp.data.results);
         setTrendingMoviesList(resp.data.results);
       })
-      .catch(error => {
-        console.error('API Error:', error); // Debugging log
-      });
   };
   const handleMovieClick = (movie) => {
     navigate(`/details/${movie.id}`, { state: { movie } });
@@ -51,7 +48,7 @@ function Search() {
         <input 
           type="text" 
           ref={movieName} 
-          onKeyDown={handleKeyDown} 
+          onChange={searchMovieHandler} 
           className='w-[80%] my-5 py-4 md:py-4 pl-3 rounded-xl bg-[#252833] md:text-xl text-sm focus:outline-none hover:outline-none focus:text-white' 
           placeholder='Search Movies.. TV shows..'
         />
