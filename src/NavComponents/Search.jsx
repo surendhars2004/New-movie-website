@@ -61,7 +61,7 @@ function Search() {
           width="24" 
           height="24" 
           fill="gray" 
-          className="bi bi-search absolute right-[12%] max-sm:w-4 max-sm:h-4" 
+          className="bi bi-search absolute right-[12%] max-sm:w-6 max-sm:h-6" 
           viewBox="0 0 16 16" 
           onClick={handleSvgClick}
         >
