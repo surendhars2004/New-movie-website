@@ -11,7 +11,7 @@ function Search() {
   const [trendingMoviesList, setTrendingMoviesList] = useState([]);
 
   const searchMovieHandler = () => {
-    fetch(`http://www.omdbapi.com/?apikey=61e576a4&t=${movieName.current.value}`)
+    fetch(`https://www.omdbapi.com/?apikey=61e576a4&t=${movieName.current.value}`)
     .then((data)=>{
       return data.json()
     })
