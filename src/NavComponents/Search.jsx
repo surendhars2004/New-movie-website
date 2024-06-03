@@ -52,7 +52,7 @@ function Search() {
         <input 
           type="text" 
           ref={movieName} 
-          onChange={searchMovieHandler} 
+          onChange={handleKeyDown} 
           className='w-[80%] my-5 py-4 md:py-4 pl-3 rounded-xl bg-[#252833] md:text-xl text-sm focus:outline-none hover:outline-none focus:text-white' 
           placeholder='Search Movies.. TV shows..'
         />
@@ -101,13 +101,13 @@ function Search() {
 
       <section>
         <h2 className="text-white m-10 font-semibold text-xl">Top Trending Movies</h2>
-        <div className='flex gap-2 md:gap-6 flex-wrap justify-around px-1 md:px-10 scroll-smooth py-3'>
+        <div className='flex gap-3 md:gap-6 flex-wrap justify-around px-1 md:px-10 scroll-smooth py-3'>
           {
             trendingMoviesList.map((movie, index) => (
               <img 
                 src={Image_base_url + movie.poster_path} 
                 alt="" onClick={() => handleMovieClick(movie)}
-                className='w-[90px] md:w-[210px] my-1 rounded-md hover:border-[3px] hover:border-gray-300 cursor-pointer hover:scale-105 transition-all duration-150 ease-in' 
+                className='w-[110px] md:w-[210px] my-1 rounded-md hover:border-[3px] hover:border-gray-300 cursor-pointer hover:scale-105 transition-all duration-150 ease-in' 
                 key={index} 
               />
             ))
