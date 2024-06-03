@@ -15,5 +15,5 @@ const getGenreBasedMovies = (id) => {
 const searchMovies =(movie) => {
   return axios.get(`http://www.omdbapi.com/?apikey=61e576a4&t=${movie}`)
 }
-// Use named exports
+
 export default { getTrendingVideos, getGenreBasedMovies,searchMovies };
